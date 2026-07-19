@@ -1,0 +1,24 @@
+{
+    "pipeline": "RetailPulse",
+    "execution_time": "2026-07-18T22:54:42.454967",
+    "status": "SUCCESS",
+    "total_duration_seconds": 6.28,
+    "steps": {
+        "Bronze": {
+            "status": "SUCCESS",
+            "duration_seconds": 0.28
+        },
+        "Silver": {
+            "status": "SUCCESS",
+            "duration_seconds": 0.4
+        },
+        "Gold": {
+            "status": "SUCCESS",
+            "duration_seconds": 0.3
+        },
+        "Charts": {
+            "status": "SUCCESS",
+            "duration_seconds": 5.3
+        }
+    }
+}

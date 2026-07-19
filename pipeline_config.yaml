@@ -1,0 +1,218 @@
+layers:
+  bronze:
+    datasets:
+    - file: orders.csv
+      name: orders
+    - file: inventory.csv
+      name: inventory
+    - file: products.csv
+      name: products
+    - file: stores.csv
+      name: stores
+    - file: suppliers.csv
+      name: suppliers
+    source_dir: data/raw
+    target_dir: data/bronze
+  gold:
+    kpis:
+      category_revenue:
+        aggregations:
+        - alias: total_revenue
+          column: total_value
+          func: sum
+        - alias: units_sold
+          column: quantity
+          func: sum
+        groupby:
+        - category
+        joins:
+        - dataset: products
+          true: product_id
+        output_file: category_revenue.csv
+        sort:
+          ascending: false
+          by: total_revenue
+      daily_sales:
+        aggregations:
+        - alias: total_orders
+          column: order_id
+          func: count
+        - alias: total_revenue
+          column: total_value
+          func: sum
+        - alias: avg_order_val
+          column: total_value
+          func: mean
+        groupby:
+        - order_date
+        output_file: daily_sales.csv
+        rename_columns:
+          order_date: date
+        sort:
+          ascending: true
+          by: date
+      low_stock_alerts:
+        enrichment:
+        - column: units_needed
+          expression: reorder_level - stock_level
+        filters:
+        - column: low_stock_flag
+          operator: equals
+          value: true
+        joins:
+        - dataset: products
+          true: product_id
+        - dataset: stores
+          true: store_id
+        output_file: low_stock_alerts.csv
+        select_columns:
+        - product_name
+        - category
+        - store_name
+        - city
+        - stock_level
+        - reorder_level
+        - units_needed
+      store_performance:
+        aggregations:
+        - alias: total_orders
+          column: order_id
+          func: count
+        - alias: total_revenue
+          column: total_value
+          func: sum
+        groupby:
+        - store_name
+        - city
+        - region
+        joins:
+        - dataset: stores
+          true: store_id
+        output_file: store_performance.csv
+        sort:
+          ascending: false
+          by: total_revenue
+      top_products:
+        aggregations:
+        - alias: total_revenue
+          column: total_value
+          func: sum
+        - alias: units_sold
+          column: quantity
+          func: sum
+        groupby:
+        - product_name
+        - category
+        joins:
+        - dataset: products
+          true: product_id
+        limit: 10
+        output_file: top_products.csv
+        sort:
+          ascending: false
+          by: total_revenue
+    source_dir: data/silver
+    target_dir: data/gold
+  silver:
+    datasets:
+      inventory:
+        columns:
+          last_updated: date
+          product_id: string
+          reorder_level: integer
+          stock_level: integer
+          store_id: string
+        enrichment:
+        - column: low_stock_flag
+          expression: stock_level < reorder_level
+          type: boolean
+        primary_key:
+        - product_id
+        - store_id
+        rules:
+          duplicate_keys:
+          - product_id
+          - store_id
+          remove_duplicates: true
+          remove_nulls:
+          - product_id
+          - store_id
+          - stock_level
+          - reorder_level
+      orders:
+        columns:
+          order_date: date
+          order_id: string
+          price: float
+          product_id: string
+          quantity: integer
+          store_id: string
+        enrichment:
+        - column: total_value
+          expression: quantity * price
+          type: float
+        primary_key: order_id
+        rules:
+          duplicate_keys:
+          - order_id
+          remove_duplicates: true
+          remove_nulls:
+          - order_id
+          - product_id
+          - store_id
+          - quantity
+          - price
+          - order_date
+      products:
+        columns:
+          category: string
+          product_id: string
+          product_name: string
+          supplier_id: string
+        primary_key: product_id
+        rules:
+          duplicate_keys:
+          - product_id
+          remove_duplicates: true
+          remove_nulls:
+          - product_id
+          - product_name
+          - category
+      stores:
+        columns:
+          city: string
+          region: string
+          store_id: string
+          store_name: string
+        primary_key: store_id
+        rules:
+          duplicate_keys:
+          - store_id
+          remove_duplicates: true
+          remove_nulls:
+          - store_id
+          - store_name
+      suppliers:
+        columns:
+          contact_city: string
+          lead_time_days: integer
+          rating: float
+          supplier_id: string
+          supplier_name: string
+        primary_key: supplier_id
+        rules:
+          duplicate_keys:
+          - supplier_id
+          remove_duplicates: true
+          remove_nulls:
+          - supplier_id
+          - supplier_name
+    source_dir: data/bronze
+    target_dir: data/silver
+pipeline:
+  database:
+    path: data/retailpulse.db
+    type: sqlite
+  engine: pandas
+  name: RetailPulse Supply Chain Pipeline
+  version: 1.0.0

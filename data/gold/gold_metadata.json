@@ -1,0 +1,55 @@
+{
+    "low_stock_alerts": {
+        "rows": 50,
+        "columns": [
+            "product_name",
+            "category",
+            "store_name",
+            "city",
+            "stock_level",
+            "reorder_level",
+            "units_needed"
+        ],
+        "timestamp": "2026-07-18T22:54:36.944061"
+    },
+    "daily_sales": {
+        "rows": 90,
+        "columns": [
+            "date",
+            "total_orders",
+            "total_revenue",
+            "avg_order_val"
+        ],
+        "timestamp": "2026-07-18T22:54:36.992343"
+    },
+    "top_products": {
+        "rows": 10,
+        "columns": [
+            "product_name",
+            "category",
+            "total_revenue",
+            "units_sold"
+        ],
+        "timestamp": "2026-07-18T22:54:37.037988"
+    },
+    "store_performance": {
+        "rows": 10,
+        "columns": [
+            "store_name",
+            "city",
+            "region",
+            "total_orders",
+            "total_revenue"
+        ],
+        "timestamp": "2026-07-18T22:54:37.101366"
+    },
+    "category_revenue": {
+        "rows": 10,
+        "columns": [
+            "category",
+            "total_revenue",
+            "units_sold"
+        ],
+        "timestamp": "2026-07-18T22:54:37.152311"
+    }
+}

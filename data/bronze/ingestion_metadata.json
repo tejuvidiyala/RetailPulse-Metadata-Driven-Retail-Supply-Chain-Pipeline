@@ -1,0 +1,47 @@
+[
+    {
+        "dataset": "orders",
+        "source_file": "data/raw\\orders.csv",
+        "target_file": "data/bronze\\orders.csv",
+        "rows": 600,
+        "columns": 6,
+        "file_size_kb": 26.52,
+        "timestamp": "2026-07-18T22:54:36.281249"
+    },
+    {
+        "dataset": "inventory",
+        "source_file": "data/raw\\inventory.csv",
+        "target_file": "data/bronze\\inventory.csv",
+        "rows": 300,
+        "columns": 5,
+        "file_size_kb": 9.75,
+        "timestamp": "2026-07-18T22:54:36.328178"
+    },
+    {
+        "dataset": "products",
+        "source_file": "data/raw\\products.csv",
+        "target_file": "data/bronze\\products.csv",
+        "rows": 30,
+        "columns": 4,
+        "file_size_kb": 1.52,
+        "timestamp": "2026-07-18T22:54:36.367873"
+    },
+    {
+        "dataset": "stores",
+        "source_file": "data/raw\\stores.csv",
+        "target_file": "data/bronze\\stores.csv",
+        "rows": 10,
+        "columns": 4,
+        "file_size_kb": 0.46,
+        "timestamp": "2026-07-18T22:54:36.405311"
+    },
+    {
+        "dataset": "suppliers",
+        "source_file": "data/raw\\suppliers.csv",
+        "target_file": "data/bronze\\suppliers.csv",
+        "rows": 20,
+        "columns": 5,
+        "file_size_kb": 0.9,
+        "timestamp": "2026-07-18T22:54:36.445160"
+    }
+]

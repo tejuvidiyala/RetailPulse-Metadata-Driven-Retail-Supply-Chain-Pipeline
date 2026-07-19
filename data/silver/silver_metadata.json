@@ -1,0 +1,32 @@
+{
+    "inventory": {
+        "raw_rows": 300,
+        "cleaned_rows": 300,
+        "dropped_rows": 0,
+        "timestamp": "2026-07-18T22:54:36.567591"
+    },
+    "orders": {
+        "raw_rows": 600,
+        "cleaned_rows": 600,
+        "dropped_rows": 0,
+        "timestamp": "2026-07-18T22:54:36.662809"
+    },
+    "products": {
+        "raw_rows": 30,
+        "cleaned_rows": 30,
+        "dropped_rows": 0,
+        "timestamp": "2026-07-18T22:54:36.719924"
+    },
+    "stores": {
+        "raw_rows": 10,
+        "cleaned_rows": 10,
+        "dropped_rows": 0,
+        "timestamp": "2026-07-18T22:54:36.780960"
+    },
+    "suppliers": {
+        "raw_rows": 20,
+        "cleaned_rows": 20,
+        "dropped_rows": 0,
+        "timestamp": "2026-07-18T22:54:36.845082"
+    }
+}

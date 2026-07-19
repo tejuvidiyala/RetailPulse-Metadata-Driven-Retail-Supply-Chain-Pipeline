@@ -1,0 +1,51 @@
+product_name,category,store_name,city,stock_level,reorder_level,units_needed
+Smart LED Television 55in,Electronics,RetailPulse Bandra Hub,Mumbai,3,20,17
+Smart LED Television 55in,Electronics,RetailPulse Koramangala,Bengaluru,11,30,19
+Smart LED Television 55in,Electronics,RetailPulse Salt Lake,Kolkata,3,10,7
+Wireless Bluetooth Headphones,Electronics,RetailPulse Downtown,Mumbai,3,30,27
+Wireless Bluetooth Headphones,Electronics,RetailPulse Bandra Hub,Mumbai,25,30,5
+Men's Running Shoes Size 10,Footwear,RetailPulse Anna Nagar,Chennai,10,30,20
+Organic Green Tea 200g,Grocery,RetailPulse Lajpat Nagar,New Delhi,5,15,10
+Organic Green Tea 200g,Grocery,RetailPulse Koramangala,Bengaluru,10,15,5
+Stainless Steel Water Bottle,Kitchen,RetailPulse Koramangala,Bengaluru,20,25,5
+Gaming Laptop 15.6in RTX,Electronics,RetailPulse Lajpat Nagar,New Delhi,8,15,7
+Gaming Laptop 15.6in RTX,Electronics,RetailPulse Anna Nagar,Chennai,18,20,2
+Yoga Mat Anti-Slip 6mm,Sports,RetailPulse Downtown,Mumbai,14,20,6
+Yoga Mat Anti-Slip 6mm,Sports,RetailPulse T. Nagar,Chennai,19,20,1
+Ceramic Coffee Mug 350ml,Kitchen,RetailPulse Koramangala,Bengaluru,14,20,6
+Women's Casual Kurti,Clothing,RetailPulse MG Road,Bengaluru,16,25,9
+Smartphone Android 128GB,Electronics,RetailPulse Park Street,Kolkata,8,20,12
+Smartphone Android 128GB,Electronics,RetailPulse Salt Lake,Kolkata,2,30,28
+Baby Diaper Pack 50pcs,Baby Care,RetailPulse Downtown,Mumbai,0,10,10
+Baby Diaper Pack 50pcs,Baby Care,RetailPulse Koramangala,Bengaluru,9,30,21
+Baby Diaper Pack 50pcs,Baby Care,RetailPulse Anna Nagar,Chennai,27,30,3
+Baby Diaper Pack 50pcs,Baby Care,RetailPulse T. Nagar,Chennai,16,30,14
+Atta Whole Wheat Flour 10kg,Grocery,RetailPulse MG Road,Bengaluru,12,25,13
+Atta Whole Wheat Flour 10kg,Grocery,RetailPulse T. Nagar,Chennai,7,25,18
+USB-C Fast Charger 65W,Electronics,RetailPulse Lajpat Nagar,New Delhi,24,30,6
+Steel Pressure Cooker 5L,Kitchen,RetailPulse Connaught,New Delhi,11,15,4
+Steel Pressure Cooker 5L,Kitchen,RetailPulse Lajpat Nagar,New Delhi,21,25,4
+Steel Pressure Cooker 5L,Kitchen,RetailPulse Salt Lake,Kolkata,21,25,4
+Steel Pressure Cooker 5L,Kitchen,RetailPulse Anna Nagar,Chennai,0,25,25
+A4 Notebook 200pg Ruled,Stationery,RetailPulse Koramangala,Bengaluru,7,30,23
+A4 Notebook 200pg Ruled,Stationery,RetailPulse Salt Lake,Kolkata,7,20,13
+A4 Notebook 200pg Ruled,Stationery,RetailPulse Anna Nagar,Chennai,7,10,3
+Running Track Pants,Sports,RetailPulse MG Road,Bengaluru,8,30,22
+Running Track Pants,Sports,RetailPulse Koramangala,Bengaluru,8,15,7
+Kids Sneakers Size 5,Footwear,RetailPulse Downtown,Mumbai,1,25,24
+Kids Sneakers Size 5,Footwear,RetailPulse Koramangala,Bengaluru,16,20,4
+Kids Sneakers Size 5,Footwear,RetailPulse T. Nagar,Chennai,20,25,5
+Portable Bluetooth Speaker,Electronics,RetailPulse Lajpat Nagar,New Delhi,1,30,29
+Portable Bluetooth Speaker,Electronics,RetailPulse T. Nagar,Chennai,19,20,1
+Cotton Bed Sheet Double,Home & Living,RetailPulse Koramangala,Bengaluru,11,25,14
+Cotton Bed Sheet Double,Home & Living,RetailPulse Salt Lake,Kolkata,5,10,5
+Face Wash Neem 150ml,Personal Care,RetailPulse Downtown,Mumbai,20,25,5
+Face Wash Neem 150ml,Personal Care,RetailPulse Anna Nagar,Chennai,18,25,7
+Mechanical Keyboard RGB,Electronics,RetailPulse Connaught,New Delhi,3,15,12
+Men's Formal Shirt,Clothing,RetailPulse Connaught,New Delhi,14,20,6
+Men's Formal Shirt,Clothing,RetailPulse Lajpat Nagar,New Delhi,22,30,8
+Men's Formal Shirt,Clothing,RetailPulse Koramangala,Bengaluru,13,30,17
+Green Tea Honey Lemon 25bags,Grocery,RetailPulse Connaught,New Delhi,5,25,20
+Green Tea Honey Lemon 25bags,Grocery,RetailPulse Lajpat Nagar,New Delhi,0,30,30
+Green Tea Honey Lemon 25bags,Grocery,RetailPulse Salt Lake,Kolkata,8,20,12
+Badminton Racket Set,Sports,RetailPulse Park Street,Kolkata,24,25,1
